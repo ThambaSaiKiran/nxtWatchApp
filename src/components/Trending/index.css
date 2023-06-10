@@ -1,0 +1,14 @@
+.midMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.dark {
+  background-color: #0f0f0f;
+  color: white !important;
+}
+
+.white {
+  background-color: #f9f9f9;
+  color: black;
+}

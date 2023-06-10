@@ -1,0 +1,49 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
+  height: 20vh;
+  background-size: cover;
+}
+
+.homeRoute {
+  width: 100vw;
+  padding: 20px;
+}
+
+.closeBtn {
+  border-style: none;
+  height: 30px;
+}
+
+.failCont {
+  padding: 20px;
+  text-align: center;
+}
+
+.failureHome {
+  height: 30vh;
+  width: 40vw;
+}
+
+.homeList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.noVideos {
+  height: 25vh;
+  width: 40vw;
+}
+
+.dark {
+  background-color: #181818;
+  color: white !important;
+}
+
+.white {
+  background-color: #f9f9f9;
+  color: black;
+}

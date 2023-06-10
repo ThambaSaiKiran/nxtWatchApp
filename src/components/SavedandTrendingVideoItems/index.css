@@ -1,0 +1,37 @@
+.trendingVideo {
+  max-width: 30%;
+  max-height: 20%;
+  margin-right: 10px;
+}
+
+.videoProf {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.homeVideoProfCont {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.viewsCont {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.trendingVideoItemCont {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}

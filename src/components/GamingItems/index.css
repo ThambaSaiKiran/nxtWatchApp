@@ -1,0 +1,15 @@
+.gamingVideo {
+  min-height: 8vh;
+  width: 13vw;
+  margin-right: 7px;
+  font-size: 15px !important;
+}
+
+.trendingVideoItemCont {
+  display: flex;
+  flex-direction: column;
+}
+
+.homeVideoProfCont {
+  width: 13vw;
+}
