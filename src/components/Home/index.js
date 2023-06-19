@@ -66,7 +66,7 @@ class Home extends Component {
   renderFetchedData = () => {
     const {fetchedData} = this.state
     return (
-      <ul className="homeList">
+      <ul id="homeList">
         {fetchedData.map(eachItem => (
           <HomeVideoItems key={eachItem.id} item={eachItem} />
         ))}
@@ -75,7 +75,7 @@ class Home extends Component {
   }
 
   onRetry = () => {
-    this.setState({apiStatus: apiStatusConstants.loading}, this.fetchData)
+    this.fetchData()
   }
 
   renderFailure = () => (
@@ -159,7 +159,9 @@ class Home extends Component {
                           alt="logo"
                           className="homeLogo"
                         />
-                        <p>Buy Nxt Watch Premium prepaid plans with UPI</p>
+                        <p className="bannerContent">
+                          Buy Nxt Watch Premium prepaid plans with UPI
+                        </p>
                         <button type="button">GET IT NOW</button>
                       </div>
                       <button
@@ -172,22 +174,24 @@ class Home extends Component {
                       </button>
                     </div>
                   ) : null}
-                  <div>
+                  <div className="searchCont">
                     <input
                       type="search"
                       value={search}
                       placeholder="Search"
                       onChange={this.onSearchChange}
+                      className="search"
                     />
                     <button
                       type="button"
                       data-testid="searchButton"
                       onClick={this.onSearchStart}
+                      className="searchBtn"
                     >
-                      <AiOutlineSearch />
+                      <AiOutlineSearch className="searchIcon" />
                     </button>
                   </div>
-                  {this.renderHomeOutput()}
+                  <div className={bgClass}>{this.renderHomeOutput()}</div>
                 </div>
               </div>
             </div>

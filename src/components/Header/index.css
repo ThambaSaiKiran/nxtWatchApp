@@ -1,0 +1,53 @@
+.logoutCont1 {
+  background-color: white;
+  height: 20vh;
+  padding: 30px;
+  text-align: center;
+}
+
+.logoutCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logoutBtn {
+  padding: 5px;
+  width: 70px;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.mobileSideHeader {
+  display: none;
+}
+
+.mobileSideHead {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: space-between;
+}
+
+.display {
+  display: block;
+}
+
+.notDisplay {
+  display: none;
+}
+
+Link {
+  text-decoration: none;
+}
+
+.headItem {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+@media all and (max-width: 768px) {
+  .mobileSideHeader {
+    display: block;
+  }
+}

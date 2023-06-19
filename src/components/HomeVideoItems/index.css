@@ -1,20 +1,25 @@
 .homeVideo {
-  width: 30%;
-  height: 20%;
+  width: 20vw;
+  height: 24vh;
 }
 
 .videoProf {
   height: 30px;
   width: 30px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-right: 5px;
+}
+
+#homeVideoProfDetCont {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px !important;
 }
 
 .homeVideoProfCont {
   display: flex;
   flex-direction: row;
-  width: 30%;
-  font-size: 10px;
+  width: 15vw;
   text-decoration: none;
 }
 
@@ -27,4 +32,57 @@
   display: flex;
   flex-direction: row;
   margin-top: 0px;
+}
+
+.homeItem {
+  list-style-type: none;
+  width: 20vw;
+  margin-right: 5vw;
+}
+
+.homeVideoProfDetCont1 {
+  min-width: 17vw;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.chName {
+  margin-top: 0px;
+}
+
+.title1 {
+  width: 18vw;
+  margin-bottom: 0px !important;
+}
+
+@media all and (max-width: 576px) {
+  .homeVideo {
+    min-width: 80vw;
+    height: 40vh;
+  }
+
+  .homeVideoProfDetCont {
+    min-width: 70vw;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+@media all and (min-width: 577px and max-width: 765px) {
+  .homeVideo {
+    min-width: 50vw;
+    height: 40vh;
+  }
+
+  .homeVideoProfDetCont {
+    width: 50vw;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }

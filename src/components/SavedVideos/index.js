@@ -27,17 +27,15 @@ const SavedVideos = () => (
                 </div>
               ) : (
                 <div>
-                  <div>
-                    <h1>Saved Videos</h1>
-                    <ul>
-                      {savedVideos.map(eachItem => (
-                        <SavedandTrendingVideoItems
-                          item={eachItem}
-                          key={eachItem.id}
-                        />
-                      ))}
-                    </ul>
-                  </div>
+                  <h1>Saved Videos</h1>
+                  <ul>
+                    {savedVideos.map(eachItem => (
+                      <SavedandTrendingVideoItems
+                        item={eachItem}
+                        key={eachItem.id}
+                      />
+                    ))}
+                  </ul>
                 </div>
               )}
             </div>

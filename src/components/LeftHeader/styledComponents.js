@@ -9,7 +9,7 @@ export const SidebarContainer = Styled.div`
   justify-content: space-between;
 //   border: solid 2px green;
   height: 100vh;
-  width: 100%;
+  min-width: 15vw;
   max-width: 250px;
   @media screen and (max-width: 768px) {
     display: none;

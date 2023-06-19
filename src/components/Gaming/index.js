@@ -56,7 +56,7 @@ class Gaming extends Component {
     return (
       <>
         <h1>Gaming</h1>
-        <ul className="gamesList">
+        <ul id="gamesList">
           {fetchedData.map(eachItem => (
             <GamingItems key={eachItem.id} item={eachItem} />
           ))}
@@ -66,7 +66,7 @@ class Gaming extends Component {
   }
 
   onRetry = () => {
-    this.setState({apiStatus: apiStatusConstants.loading}, this.fetchData)
+    this.fetchData()
   }
 
   renderFailure = () => (

@@ -3,7 +3,7 @@ import {BiSun} from 'react-icons/bi'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
 export const NavContainer = Styled.nav`
-padding:10px;
+padding:20px;
 background-color:${props => (props.isDark ? '#212121' : '#ffffff')};
 display:flex;
 flex-direction:row;
@@ -31,6 +31,7 @@ margin-right:20px;
 export const MediumDevicesProfile = Styled.img`
 font-family:'Roboto';
 height:21px;
+margin-right: 20px;
 @media screen and (max-width:768px){
     display:none;
 }
@@ -42,6 +43,7 @@ export const WhiteColorSun = Styled(BiSun)`
 
 export const HiMenuAdjust = Styled(GiHamburgerMenu)`
        color : ${props => (props.isDark ? '#ffffff' : '#000000')};
+       margin-right: 10px;
        @media screen and (min-width:768px){
        display:none;
     }`

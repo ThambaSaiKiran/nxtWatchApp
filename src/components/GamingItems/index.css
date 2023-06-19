@@ -1,15 +1,35 @@
 .gamingVideo {
-  min-height: 8vh;
+  min-height: 20vh;
   width: 13vw;
   margin-right: 7px;
   font-size: 15px !important;
 }
 
-.trendingVideoItemCont {
-  display: flex;
-  flex-direction: column;
+.gameProfCont {
+  min-width: 13vw;
+  font-size: 14px;
+  margin-right: 10px;
 }
 
-.homeVideoProfCont {
-  width: 13vw;
+.gameItem {
+  list-style-type: none;
+  margin-right: 5vw;
+  margin-bottom: 3vh;
+}
+
+.gameTitle {
+  font-weight: bold;
+}
+
+@media all and (orientation: portrait) {
+  .gamingVideo {
+    min-height: 30vh;
+    width: 25vw;
+    margin-right: 7px;
+    font-size: 15px !important;
+  }
+  .gameProfCont {
+    width: 25vw;
+    font-size: 12px;
+  }
 }

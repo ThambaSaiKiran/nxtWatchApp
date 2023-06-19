@@ -67,19 +67,26 @@ class Login extends Component {
         {value => {
           const {isDark} = value
           const bgClass = isDark ? 'dark' : 'white'
+          const backGround = isDark ? 'darkBg' : 'whiteBg'
           return (
-            <div className={`loginCont ${isDark}`}>
-              <div className="loginCont1">
+            <div className={`loginCont ${backGround}`}>
+              <div className={`loginCont1 ${bgClass}`}>
                 <div className="logoCont">
                   <img
-                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                    src={
+                      isDark
+                        ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
+                        : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
+                    }
                     alt="website logo"
                     className="logo"
                   />
                 </div>
                 <div>
                   <form onSubmit={this.onSubmitFrom} className="loginForm">
-                    <label htmlFor="name">USERNAME</label>
+                    <label htmlFor="name" className={bgClass}>
+                      USERNAME
+                    </label>
                     <input
                       id="name"
                       type="text"
@@ -88,7 +95,9 @@ class Login extends Component {
                       className="input input1"
                       onChange={this.onChangeUsername}
                     />
-                    <label htmlFor="passW">PASSWORD</label>
+                    <label htmlFor="passW" className={bgClass}>
+                      PASSWORD
+                    </label>
                     <input
                       id="passW"
                       type={passView}
@@ -104,7 +113,7 @@ class Login extends Component {
                         checked={passCheck}
                         onClick={this.changePassView}
                       />
-                      <label htmlFor="check" className="passCheck">
+                      <label htmlFor="check" className={`passCheck ${bgClass}`}>
                         Show Password
                       </label>
                     </div>

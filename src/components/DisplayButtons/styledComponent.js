@@ -12,7 +12,7 @@ export const SideBarButton = Styled.button`
   padding: 10px;
   border: 0;
   background-color: ${props => (props.isActive ? '#cccccc' : 'transparent')};
-  color: ${props => (props.isDark ? '#ffffff' : 'black')};
+  color: ${props => (props.isDark ? 'white' : 'black')};
 `
 
 export const SpanAdjust = Styled.span`

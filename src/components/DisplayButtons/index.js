@@ -12,6 +12,7 @@ const DisplayButtons = props => {
     <watchAppContext.Consumer>
       {value => {
         const {isDark, changeActiveButton, sideButtonActiveId} = value
+        const bgClass = isDark ? 'dark' : 'white'
         const onChangeActiveButton = () => {
           changeActiveButton(id)
         }

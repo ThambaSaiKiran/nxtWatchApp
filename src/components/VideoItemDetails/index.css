@@ -7,19 +7,30 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .VideoDetImg {
-  height: 40vh;
-  width: 80vw;
+  min-height: 70vh;
+  min-width: 60vw;
+}
+
+.likeContBtn {
+  border-style: none;
+  background-color: transparent;
+}
+
+.title {
+  font-weight: bold;
 }
 
 .likeCont {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  min-width: 25%;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 15vw;
+  font-size: 30px !important;
 }
 
 .blue {
@@ -35,14 +46,14 @@
 }
 
 .lIcons {
-  margin-top: 17px;
-  margin-right: 5px;
+  margin-top: 0px;
+  margin-right: 2px;
 }
 
 .likeCont1 {
   display: flex;
   flex-direction: row;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .prof {
@@ -62,4 +73,11 @@
   flex-direction: row;
   justify-content: space-between;
   width: 15%;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

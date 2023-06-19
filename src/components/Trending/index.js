@@ -56,7 +56,7 @@ class Trending extends Component {
     return (
       <>
         <h1>Trending</h1>
-        <ul className="homeList">
+        <ul className="trendingList">
           {fetchedData.map(eachItem => (
             <SavedandTrendingVideoItems key={eachItem.id} item={eachItem} />
           ))}
@@ -66,7 +66,7 @@ class Trending extends Component {
   }
 
   onRetry = () => {
-    this.setState({apiStatus: apiStatusConstants.loading}, this.fetchData)
+    this.fetchData()
   }
 
   renderFailure = () => (

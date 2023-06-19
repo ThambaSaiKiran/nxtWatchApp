@@ -54,6 +54,10 @@ class VideoItemDetails extends Component {
     }
   }
 
+  onRetry = () => {
+    this.fetchData()
+  }
+
   renderFailure = () => (
     <div className="failCont">
       <img
@@ -64,7 +68,9 @@ class VideoItemDetails extends Component {
       <h1>Oops! Something Went Wrong</h1>
       <p>We are having some trouble to complete your request</p>
       <p>Please try again</p>
-      <button type="button">Retry</button>
+      <button type="button" onClick={this.onRetry}>
+        Retry
+      </button>
     </div>
   )
 
@@ -97,7 +103,8 @@ class VideoItemDetails extends Component {
     return (
       <watchAppContext.Consumer>
         {value => {
-          const {savedVideos, addSavedVideos, removeSavedVideos} = value
+          const {savedVideos, addSavedVideos, removeSavedVideos, isDark} = value
+          const bgClass = isDark ? 'dark' : 'white'
           const onChangeSave = () => {
             if (isSaved === true) {
               return removeSavedVideos(id)
@@ -108,12 +115,14 @@ class VideoItemDetails extends Component {
             this.setState({isSaved: !isSaved}, onChangeSave)
           }
           return (
-            <div className="videoDetCont1">
-              <ReactPlayer
-                url={fetchedData.video_url}
-                className="VideoDetImg"
-              />
-              <p>{title}</p>
+            <div className={`videoDetCont1 ${bgClass}`}>
+              <div className="VideoDetImg">
+                <ReactPlayer
+                  url={fetchedData.video_url}
+                  className="VideoDetImg"
+                />
+              </div>
+              <p className="title">{title}</p>
               <div className="videoDetContViews">
                 <div className="videoDetContViews1">
                   <p>{fetchedData.view_count} views</p>
@@ -122,7 +131,11 @@ class VideoItemDetails extends Component {
                 <div className="likeCont">
                   <div className={`likeCont1 ${likeContColor}`}>
                     <BiLike className="lIcons" onClick={this.onClickLike} />
-                    <button type="button" onClick={this.onClickLike}>
+                    <button
+                      type="button"
+                      onClick={this.onClickLike}
+                      className={`likeContBtn ${likeContColor}`}
+                    >
                       Like
                     </button>
                   </div>
@@ -131,18 +144,30 @@ class VideoItemDetails extends Component {
                       className="lIcons"
                       onClick={this.onClickDislike}
                     />
-                    <button type="button" onClick={this.onClickDislike}>
+                    <button
+                      type="button"
+                      onClick={this.onClickDislike}
+                      className={`likeContBtn ${disLikeContColor}`}
+                    >
                       Dislike
                     </button>
                   </div>
-                  <div className={`likeCont1 ${savedContColor}`}>
+                  <div className={`likeCont1 ${savedContColor} ${bgClass}`}>
                     <BiListPlus className="lIcons" onClick={onClickSave} />
                     {isSaved ? (
-                      <button type="button" onClick={onClickSave}>
+                      <button
+                        type="button"
+                        onClick={onClickSave}
+                        className={`likeContBtn ${bgClass}`}
+                      >
                         Saved
                       </button>
                     ) : (
-                      <button type="button" onClick={onClickSave}>
+                      <button
+                        type="button"
+                        onClick={onClickSave}
+                        className={`likeContBtn ${bgClass}`}
+                      >
                         Save
                       </button>
                     )}

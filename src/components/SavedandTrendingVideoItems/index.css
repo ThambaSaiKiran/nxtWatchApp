@@ -11,17 +11,22 @@
   margin-right: 5px;
 }
 
-.homeVideoProfCont {
+.trendingVideoProfCont {
   display: flex;
   flex-direction: row;
-  width: 30%;
-  font-size: 10px;
+  justify-content: space-between;
+  width: 50vw;
+  font-size: 14px;
   text-decoration: none;
 }
 
 .link {
   text-decoration: none;
   color: black;
+}
+
+.channelName {
+  width: 60vw;
 }
 
 .viewsCont {
@@ -34,4 +39,44 @@
   display: flex;
   flex-direction: row;
   margin: 10px;
+  width: 90vw;
+}
+
+.noOfViews {
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.savedAndTrendingItem {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.savedTitle {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#trendingVideoItem {
+  display: flex;
+  flex-direction: row;
+}
+
+@media all and (max-width: 575px) {
+  #trendingVideoItem {
+    display: flex;
+    flex-direction: column;
+  }
+  .trendingVideo {
+    min-width: 80%;
+    height: 40vh;
+    margin-right: 10px;
+  }
+}
+
+@media all and (min-width: 576px and max-width: 768px) {
+  .trendingVideoProfCont {
+    min-width: 30vw;
+  }
 }

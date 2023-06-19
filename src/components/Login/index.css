@@ -4,10 +4,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .logoCont {
   padding: 10px;
+}
+
+.darkBg {
+  background-color: #212121;
 }
 
 .errMsg {
@@ -16,7 +21,7 @@
 }
 .dark {
   background-color: #0f0f0f;
-  color: white !important;
+  color: white;
 }
 
 .white {
@@ -38,12 +43,12 @@
 
 .loginCont1 {
   width: 40vw;
-  box-shadow: 10px 10px 10px 10px #f1f5f9;
   padding: 40px;
 }
 
 .input1 {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
+  margin-top: 7px;
 }
 
 .logoCont {
@@ -64,4 +69,22 @@
 
 .passCheck {
   color: black;
+}
+
+@media all and (orientation: portrait) {
+  .loginCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+  }
+
+  .loginCont1 {
+    width: 80vw;
+    box-shadow: 5px 5px 5px 5px #f1f5f9;
+    padding: 40px;
+    margin-left: 10vw;
+  }
 }
